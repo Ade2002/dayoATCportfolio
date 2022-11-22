@@ -1,0 +1,429 @@
+.section {
+  padding: $contentPadding;
+
+  &#overlay {
+    position: fixed;
+    background-color: $black;
+    opacity: 0.5;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+  }
+
+  &#hero {
+    background-image: url(../../public//snakeBG.png), url(../../public//springBG.png), url(../../public//kiteBG.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-attachment: fixed, fixed, fixed;
+    background-position: -30px 190px, 0 80px, 550px 60px;
+    justify-content: space-between;
+    background-size: 40% 65%, auto, auto;
+
+    .heroText {
+      padding-top: $headerHeight;
+      width: 100%;
+
+      span {
+        p {
+          text-align: start;
+        }
+      }
+
+      @include media {
+        padding-top: 0 * $headerHeight;
+        max-width: 45%;
+      }
+    }
+
+    .heroImg {
+      padding-top: 2em;
+
+      img {
+        width: 100%;
+        transform: scale(1.15);
+        animation-duration: 4s;
+        clip-path: polygon(0% 0%, 100% 1%, 100% 100%, 0% 100%);
+
+        @include media {
+          transform: scale(1.1);
+
+          /*  &:last-child {
+            display: none;
+          } */
+
+          width: 85%;
+          min-width: 80%;
+
+          transform: translate(3.125%, 0) scale(1.1);
+        }
+      }
+
+      .socials {
+        justify-content: flex-end;
+        width: 100%;
+        margin-top: 0.5em;
+
+        a {
+          margin-left: 1em;
+        }
+      }
+    }
+
+  }
+
+  &.affiliates {
+    flex-wrap: wrap;
+
+    &:first-child {
+
+      //margin-top: 5vh;
+      img {
+        margin-top: 18 * $smallMargin;
+
+        @include media {
+          margin-top: 8 * $smallMargin;
+        }
+      }
+    }
+
+    img {
+      filter: opacity(0.3);
+      object-fit: scale-down;
+      object-position: left;
+      width: 25.3%;
+      margin-top: 8 * $smallMargin;
+
+      @include media {
+        margin-top: 0 * $smallMargin;
+        width: 16%;
+        object-position: center;
+      }
+    }
+  }
+
+  &#services {
+    justify-content: space-between;
+    background: #292929;
+    padding-top: $headerHeight;
+
+    div {
+      padding-top: 0 * $headerHeight;
+      width: 100%;
+
+      @include media {
+        padding-top: 0.2 * $headerHeight;
+        max-width: 45%;
+      }
+    }
+
+    img {
+      width: 100%;
+      transform: scale(1.15);
+      animation-duration: 4s;
+      clip-path: polygon(0% 0%, 100% 1%, 100% 100%, 0% 100%);
+      /* align-self: flex-start; */
+
+      @include media {
+        transform: scale(1.1);
+        min-width: 50%;
+        width: 50%;
+        transform: translate(3.125%, 0) scale(1.1);
+      }
+    }
+
+    @include media {
+      flex-direction: row;
+
+      background: {
+        image: url(../../public/circleBackground.svg);
+        repeat: no-repeat;
+        position: 400% 0%;
+        size: 90% 99%;
+      }
+    }
+  }
+
+  &#connect {
+    padding-top: 0 * $paddingHeight;
+
+    >div {
+      align-self: flex-start;
+    }
+
+    .socials {
+      justify-content: flex-start;
+      width: 100%;
+      margin-top: 2em;
+
+      a {
+        margin-left: 1em;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    form {
+      margin-top: 0;
+      width: 100%;
+
+      button {
+        background: $myOrange;
+        border-color: $myOrange;
+        margin: 2em 0 0 0;
+        justify-self: start;
+        width: 120px;
+      }
+
+      h5 {
+        padding: 0;
+        margin: 2em 0;
+        grid-column: 1/ span 2;
+      }
+
+      span {
+        margin-bottom: 0.5em;
+
+        i {
+          font-size: 10px;
+          font-style: normal;
+          color: red;
+        }
+
+        fieldset {
+          border: 1px solid $myOrange;
+          border-radius: 4px;
+          height: 3.65em;
+          padding: 0 0 2em 1em;
+          width: 100%;
+          margin-bottom: 0.5em;
+
+          label {
+            color: $myOrange;
+            font-size: 14px;
+          }
+
+          legend {
+            padding-bottom: 0.2em;
+
+          }
+
+          input,
+          select {
+            width: 100%;
+            background-color: inherit;
+            color: #857C7C;
+            font-size: 12px;
+
+            &:-internal-autofill-selected {
+              appearance: menulist-button;
+              background-image: none !important;
+              background-color: transparent !important;
+              color: $myOrange !important;
+            }
+          }
+
+          div {
+            margin: 0;
+          }
+        }
+
+        &:nth-child(4) {
+          height: 7em;
+
+          fieldset {
+            height: 5em;
+          }
+        }
+
+      }
+
+      @include media {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        width: 45%;
+      }
+    }
+
+    @include media {
+      align-items: center;
+      justify-content: space-between;
+
+      div {
+        max-width: 40%;
+      }
+    }
+  }
+
+  &#steam {
+    padding: 0;
+    background: linear-gradient(0deg,
+        #a5a6f6 -11.14%,
+        rgba(252, 221, 236, 0) 10.68%);
+
+    @include media {
+      background: {
+        image: url("../../public/airship.svg"),
+          linear-gradient(0deg, #a5a6f6 -11.14%, rgba(252, 221, 236, 0) 28.68%);
+        repeat: no-repeat;
+        size: 90%, 100%;
+        position: 60% 10%;
+      }
+    }
+
+    >div {
+      padding: $contentPadding;
+
+      &.note {
+        h4 {
+          margin: 0 0 4.5vh;
+        }
+
+        @include media {
+          max-width: 55%;
+          padding-top: 10vh;
+        }
+      }
+
+      &.kids {
+        img {
+          height: 50vh;
+          max-height: 250px;
+          width: 90%;
+          margin-bottom: 4vh;
+          object-fit: cover;
+          border-radius: 2 * $borderRadius;
+          image-rendering: pixelated;
+
+          &:hover {
+            transform: scale(1.2);
+            transition: all 500ms ease;
+          }
+
+          @include media {
+            height: 35vh;
+            max-height: 25%;
+            width: 30%;
+            margin-top: 10vh;
+          }
+        }
+      }
+
+      &:last-child a {
+        margin-top: 0;
+
+        @include media {
+          background-color: #d7d8fb;
+        }
+      }
+    }
+  }
+
+  &#workstation {
+    padding: 0;
+
+    >div {
+      padding: $contentPadding;
+      align-items: flex-start;
+
+      &:first-child {
+        justify-content: space-between;
+
+        @include media($laptop) {
+          margin-top: 10%;
+        }
+
+        >div {
+          @include media($laptop) {
+            width: 45%;
+          }
+        }
+
+        .buttons {
+          justify-content: flex-start;
+
+          a {
+            margin: $paddingHeight 0;
+
+            @include media {
+              margin: 1.5 * $paddingHeight 0 5.5 * $paddingHeight;
+
+              &:first-child {
+                border: none;
+                margin-right: 3vw;
+              }
+
+              &:last-child {
+                width: 25%;
+              }
+            }
+          }
+        }
+
+        img {
+          image-rendering: pixelated;
+
+          @include media($tablet) {
+            /* margin: -10% 0 5% 10%; */
+            /* padding-bottom: 10%; */
+            z-index: 1;
+            min-width: 30%;
+            width: 35%;
+            transform: translateY(-20%);
+          }
+
+          @include media($laptop) {
+            /* padding-bottom: 20%; */
+            /* margin: -15% 0 5% 10%; */
+          }
+
+          @include media(1200px) {
+            transform: translateY(-30%);
+          }
+        }
+      }
+
+      &#contact {
+        border-top: {
+          left-radius: 10px;
+          right-radius: 10px;
+        }
+
+        margin-bottom: 0vh;
+        padding: 4 * $paddingHeight $paddingSide;
+
+        @include media {
+          /* padding: 5% $paddingSide; */
+          margin: -20vw 3em 0;
+          transform: translateY(60%);
+          border-radius: 10px;
+          z-index: 10;
+        }
+
+        p {
+          @include media {
+            max-width: 85%;
+          }
+        }
+
+        h4 {
+          color: #a6efff;
+        }
+
+        a {
+          border: 1px solid #fff;
+
+          &:hover {
+            color: black;
+          }
+
+          @include media {
+            width: 50%;
+            margin: 0 0 0 4vw;
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+  }
+}

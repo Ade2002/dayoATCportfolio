@@ -1,0 +1,455 @@
+.black {
+  color: $black !important;
+}
+
+.cOrange {
+  color: $myOrange;
+}
+
+.bgOrange {
+  background-color: $myOrange;
+}
+
+.backdrop {
+  @include backdrop();
+}
+
+.modal {
+  @include modals();
+}
+
+.registerNotify {
+  background-color: #11088a;
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: $white;
+  border-radius: 15px 15px 0 0;
+  padding: 1em 0;
+}
+
+
+.registersection {
+  padding: 1em 3.5vw;
+  @include flex(column);
+
+  div {
+    p {
+      text-align: center;
+      background: rgba(254, 188, 26, 0.1);
+      border: 1px solid #11088A;
+      border-radius: 12px;
+      padding: 1em 3.1vw;
+    }
+
+    form {
+      margin-top: 2em;
+
+      button {
+        background: #11088A;
+        border-color: #11088A;
+        margin: 0;
+        justify-self: right;
+        grid-template-columns: 48% 48%;
+        grid-column: 1/ span 2;
+      }
+
+      fieldset {
+        border: 1px solid #36488C;
+        border-radius: 4px;
+        height: 3.65em;
+        padding: 0 0 2em 1em;
+        margin-bottom: 1em;
+
+        label {
+          color: #555555;
+          font-size: 12px;
+        }
+
+        input {
+          width: 100%;
+          background-color: #fff;
+          color: #857C7C;
+          font-size: 12px;
+
+          &:-internal-autofill-selected {
+            appearance: menulist-button;
+            background-image: none !important;
+            background-color: transparent !important;
+            color: fieldtext !important;
+          }
+        }
+
+        div {
+          margin: 0;
+        }
+
+        &:nth-child(5) {
+          padding: 0 0 0 1em;
+          grid-column: 1/ span 2;
+        }
+      }
+
+
+
+      @include media {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .registerdiv {
+    form {
+      fieldset {
+
+        &:nth-child(3) {
+          grid-column: 1/ span 2;
+          height: 6em;
+
+          input {
+            width: 100%;
+            background-color: #fff;
+            color: #857C7C;
+            font-size: 12px;
+            height: fit-content;
+            padding: 1em 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* .none_t {
+  display: none;
+}
+
+@media only screen and (max-width: 720px) {
+  .none_t {
+    display: inline-block;
+  }
+}
+ */
+.w100 {
+  width: 100%;
+}
+
+.bgBlack {
+  background-color: $black !important;
+}
+
+.white {
+  color: $white !important;
+}
+
+
+
+.bgWhite {
+  background-color: $white !important;
+}
+
+.purple {
+  color: $purple !important;
+}
+
+.bgPurple {
+  background-color: $purple !important;
+}
+
+.blue {
+  color: $deepBlue !important;
+}
+
+.bgBlue {
+  background-color: $deepBlue !important;
+}
+
+.bgMobileHeader {
+  background-color: $white;
+
+  @include media {
+    background-color: rgba(#000, 0);
+  }
+}
+
+.linkButton {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  max-height: 70px;
+  height: 4 * $paddingHeight;
+  border-radius: $borderRadius;
+  border: 2px solid $myOrange;
+  white-space: nowrap;
+  vertical-align: middle;
+  transition: all 0.3s ease-in-out;
+  font-size: $defaultFontSize;
+  margin: 1em 0 0 0;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  @include media {
+    width: 24vw;
+    margin: 0 0 0 0;
+  }
+
+  @include media($laptop) {
+    width: 18vw;
+  }
+
+  //further classify buttons based on width and Color
+}
+
+.secondaryButton {
+  width: 100%;
+  align-self: flex-start;
+
+  @include media($tablet) {
+    align-self: center;
+    width: 24vw;
+    margin-left: 1em;
+  }
+
+  @include media($laptop) {
+    width: 18vw;
+  }
+}
+
+.mover {
+  animation: mover 1s infinite alternate;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.flex {
+  @include flex(column);
+  max-width: 100%;
+  overflow: hidden;
+
+  img {
+    max-width: 80%;
+  }
+
+  button {
+    font-size: 3vw;
+
+    &:first-child:hover {
+      background-color: #1ba33c;
+      opacity: 1;
+    }
+  }
+
+  >div {
+    margin-top: 5vh;
+  }
+
+  $column: &+_c;
+  $row: &+_r;
+
+  @at-root #{$column} {
+    @include flex(column);
+
+    @at-root &r {
+      @extend #{$column};
+
+      @include media($tablet) {
+        flex-direction: row;
+      }
+    }
+
+    @at-root &R {
+      @extend #{$column};
+
+      @include media($tablet) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  @at-root #{$row} {
+    @include flex(row);
+
+    @at-root &c {
+      @extend #{$row};
+
+      @include media($tablet) {
+        flex-direction: column;
+      }
+    }
+
+    @at-root &C {
+      @extend #{$row};
+
+      @include media($tablet) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  @include media($tablet) {
+    flex-direction: row;
+
+    img {
+      width: 50%;
+    }
+  }
+}
+
+// display using flexbox
+.mobile {
+  display: flex;
+
+  @include media {
+    display: none;
+  }
+}
+
+.none {
+  display: none;
+
+  //starts showing from on tablet
+  &_m {
+    display: none;
+
+    @include media {
+      display: inline-block;
+    }
+  }
+
+  //only shows on laptop
+  &_t {
+    display: none;
+
+    @include media($laptop) {
+      display: inline-block;
+    }
+  }
+}
+
+.rotate {
+  transform: rotate(180deg)
+}
+
+.w {
+  $widths: 25, 33, 50, 60, 75, 100;
+
+  @each $width in $widths {
+    @at-root &#{$width} {
+      width: $width#{"%"};
+    }
+
+    $devices: (tablet: $tablet,
+      laptop: $laptop,
+    );
+
+    @each $device,
+    $type in $devices {
+      @at-root .#{$device} {
+        @include media($type) {
+          display: flex;
+
+          @at-root &#{$width} {
+            width: $width#{"%"};
+
+            margin: {
+              left: auto;
+              right: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//font-weight
+.fw {
+  $fontW: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+  $text-align: left, center, right;
+
+  @each $fw in $fontW {
+    $bb: #{& + $fw};
+
+    @at-root #{$bb} {
+      @each $ta in $text-align {
+        @at-root &_#{$ta} {
+          @extend #{$bb};
+          text-align: $ta;
+        }
+      }
+
+      font-weight: $fw;
+    }
+  }
+}
+
+.back-to-top {
+  height: 36px;
+  width: 36px;
+  bottom: 50px;
+  right: 30px;
+  padding: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  color: #fff;
+  background-color: #2f55d4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: rotate(45deg);
+    background-color: #0b5ed7 !important;
+
+    border-color: #0a58ca;
+
+    svg {
+      transform: rotate(-45deg);
+    }
+  }
+
+  svg {
+    transition: all 0.5s ease;
+  }
+}
+
+.FourOhFour {
+
+  /*   background-image: url('../../public/doodles.png');
+ */
+  img {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  h3 {
+    font-size: 1.16em;
+    margin: 3vh 0 0.6vh;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 0.6vh;
+    margin-bottom: 0;
+  }
+}
