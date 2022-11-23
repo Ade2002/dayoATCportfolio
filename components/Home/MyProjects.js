@@ -18,23 +18,23 @@ const Services = () => {
           className={`cOrange`}
         >
           <svg
-            width='54'
-            height='5'
-            viewBox='0 0 54 5'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'
+            width="54"
+            height="5"
+            viewBox="0 0 54 5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <line
-              x1='2.5'
-              y1='2.5'
-              x2='51.5'
-              y2='2.5'
-              stroke='#FB4B04'
-              strokeWidth='5'
-              strokeLinecap='round'
+              x1="2.5"
+              y1="2.5"
+              x2="51.5"
+              y2="2.5"
+              stroke="#333333"
+              strokeWidth="5"
+              strokeLinecap="round"
             />
-          </svg>{' '}
-          About Me
+          </svg>{" "}
+          Hello
         </motion.span>
 
         <motion.h2
@@ -42,7 +42,7 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}
         >
-          My Services.
+          I’m Sarah Jackson
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 200 }}
@@ -82,15 +82,15 @@ const Services = () => {
         </div>
       </div>
       <motion.img
-        initial={{ opacity: 0, y: '100px' }}
+        initial={{ opacity: 0, y: "100px" }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 3 }}
         className={`wow animate__animated animate__slideInUp`}
-        src='myService.png'
-        alt='LaptopWomanFk'
+        src="myService.png"
+        alt="LaptopWomanFk"
       />
     </section>
-  )
+  );
 }
 
 export default Services
