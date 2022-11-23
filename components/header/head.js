@@ -44,15 +44,15 @@ const HEAD = () => {
         href='/favico.ico'
         sizes='120x120'
       />
-      <link rel='apple-touch-icon' type='image/png' href='/favico.ico' />
-      <link rel='shortcut icon' href='/assets/img/atc_background.ico' />
+      <Link legacyBehavior rel='apple-touch-icon' type='image/png' href='/favico.ico' />
+      <Link legacyBehavior rel='shortcut icon' href='/assets/img/atc_background.ico' />
       <link
         rel='shortcut icon'
         type='image/png'
         href='/favico.ico'
         sizes='196x196'
       />
-      <link rel='icon' href='/favicon.ico' />
+      <Link legacyBehavior rel='icon' href='/favicon.ico' />
       <link
         rel='shortcut icon'
         type='image/png'

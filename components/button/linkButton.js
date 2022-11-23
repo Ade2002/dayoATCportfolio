@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const LinkButtons = ({ classes, contents, to }) => {
   return (
-    <Link href={to}>
+    <Link legacyBehavior href={to}>
       <motion.a
         initial={{ opacity: 0, y: '-10px' }}
         whileInView={{ opacity: 1, y: 0 }}
