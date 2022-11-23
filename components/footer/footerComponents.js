@@ -13,7 +13,7 @@ const Footer = ({ footerid }) => {
       <section
         className={`${FooterStyles.flex_cr} ${FooterStyles.socials} cOrange `}
       >
-        <Link legacyBehavior href='/'>
+        <Link href='/'>
           <a className={`${FooterStyles.logo} ${FooterStyles.none} cOrange `}>
             <svg
               width='29'

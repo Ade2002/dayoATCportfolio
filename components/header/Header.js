@@ -37,7 +37,7 @@ const Header = ({ LinkButtonClasses, LinkButtonContents, LinkButtonTo }) => {
 
   return (
     <header className={HeaderStyles.header}>
-      <Link legacyBehavior href='/'>
+      <Link href='/'>
         <a className={`${HeaderStyles.logo}`}>
           <svg
             width='29'
@@ -62,16 +62,16 @@ const Header = ({ LinkButtonClasses, LinkButtonContents, LinkButtonTo }) => {
         }
         `}
       >
-        <Link legacyBehavior href='/courses'>
+        <Link href='/courses'>
         Servicehgs
         </Link>
-        <Link legacyBehavior href='https://www.atc.com.ng/contact/'>
+        <Link href='https://www.atc.com.ng/contact/'>
           <a>Projects</a>
         </Link>
-        <Link legacyBehavior href='https://www.atc.com.ng/faq/'>
+        <Link href='https://www.atc.com.ng/faq/'>
           <a>Testimonials</a>
         </Link>
-        <Link legacyBehavior href='https://www.atc.com.ng/faq/'>
+        <Link href='https://www.atc.com.ng/faq/'>
           <a>Connect</a>
         </Link>
         <LinkButtons
