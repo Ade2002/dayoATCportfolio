@@ -35,7 +35,6 @@ const Services = () => {
           </svg>{" "}
           Hello
         </motion.span>
-
         <motion.h2
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,6 +42,10 @@ const Services = () => {
         >
           I’m Sarah Jackson
         </motion.h2>
+        <h3>
+          A UX / UI designer, product designer, content creator and creative
+          director.
+        </h3>
         <motion.p
           initial={{ opacity: 0, y: 200 }}
           whileInView={{ opacity: 1, y: 0 }}
