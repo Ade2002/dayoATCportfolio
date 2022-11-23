@@ -1,0 +1,290 @@
+.none {
+    display: none;
+}
+
+.db {
+    display: block;
+}
+
+.di {
+    display: inline;
+}
+
+.active {
+    border: 1px solid #11088A !important;
+    border-radius: 5px !important;
+}
+
+.faqsection {
+    text-align: center;
+
+    @include media($tablet) {
+        /* padding-top: 4em; */
+    }
+
+    h1 {
+        span {
+            border-bottom: $border;
+        }
+    }
+
+    .doyo {
+        width: 80%;
+        margin: auto auto 1em auto;
+        line-height: 1.5;
+
+
+    }
+
+    .faqSection {
+        margin-top: $mt;
+        text-align: left;
+
+        @include media($tablet) {
+            @include flex(row, space-evenly, center);
+        }
+
+        .products {
+            background-color: $commonBgColor;
+            display: grid;
+            grid-template-columns: 40% 40%;
+            grid-template-rows: 7vh 7vh;
+            justify-content: center;
+            align-content: center;
+            grid-gap: 20px;
+            width: 100%;
+            padding: 1vw 1.5vw;
+            height: 40vh;
+
+            @include media($tablet) {
+                border-radius: $borderradius;
+                @include flex(column, center, center);
+                align-self: flex-start;
+                height: 50vh;
+                grid-gap: 0;
+                width: 25%;
+            }
+
+            .button {
+                border: none;
+                background: $altTextColor;
+                color: $textColor;
+                padding: $padding;
+
+                &:hover {
+                    background: none;
+                }
+
+                &:focus {
+                    border: 1px solid #11088A;
+                    border-radius: $borderradius;
+                }
+
+                @include media($tablet) {
+                    @include btn;
+                    padding: $padding;
+                    max-width: 200px;
+                    margin-top: 0;
+                    margin-bottom: 1em;
+                }
+            }
+        }
+
+        .questionsection {
+            width: 100%;
+            @include flex(column, center, center);
+            padding: $padding;
+            margin-top: 3em;
+            margin-bottom: 3em;
+
+            @include media {
+                margin-top: 0;
+                margin-left: 1em;
+                padding: 0;
+                max-width: 50%;
+            }
+
+            .question_answer {
+                width: 90%;
+                padding: 3vw 1.5vw;
+                border-radius: $borderradius;
+                border: 1px solid #C4C4C4;
+
+                @include media {
+                    padding: $padding;
+                    width: 100%;
+                }
+
+                &:nth-child(even) {
+                    margin: $mt 0;
+                }
+
+                .question_btn {
+                    @include flex(row, center, center);
+                    justify-content: space-between;
+
+                    b {
+                        font-size: 10px;
+
+                        @include media {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .btns {
+                        .btn {
+                            border: none;
+                            background: none;
+                            font-size: 5vw;
+                            color: $textColor;
+                            margin-left: 0;
+
+                            &:hover {
+                                background: none;
+                            }
+
+                            @include media {
+                                font-size: 2vw;
+                                width: 100%;
+                                margin: 0;
+                                min-height: initial;
+                                max-height: initial;
+                                height: initial;
+                            }
+                        }
+                    }
+                }
+
+                .answer {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    margin-top: 3em;
+    @extend .faqsection;
+
+    h1 {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.contactSection {
+    background-color: #11088A;
+    padding-top: 3em;
+    margin-top: $mt;
+    margin-bottom: 0;
+    @include flex(column-reverse, center, center);
+    width: 100%;
+
+    @include media($tablet) {
+        padding: $padding;
+        @include flex(row, space-evenly, flex-start);
+    }
+}
+
+.form-group {
+    width: 100%;
+    @include flex(column, flex-start, flex-start);
+
+    label {
+        @include label;
+    }
+
+    input {
+        @include input;
+    }
+
+    textarea {
+        width: 100%;
+        border: none;
+        padding: $padding;
+    }
+}
+
+.btn-faq {
+    border-radius: $borderradius;
+    background-color: $textColor;
+    border: none;
+    font-weight: bold;
+    margin-top: 1em;
+    justify-self: left;
+    width: 100%;
+    height: 6vh;
+
+    &:hover {
+        color: inherit;
+    }
+
+    @include media($tablet) {
+        max-width: 150px;
+        padding: 0;
+    }
+}
+
+.findus {
+
+    @include media($tablet) {
+        width: 100%;
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            @media screen and (min-width: 800px) {
+                font-size: 3vw;
+            }
+        }
+    }
+
+}
+
+.contactus {
+    @extend .findus;
+    width: 87%;
+
+    @include media($tablet) {
+        width: 40%;
+
+        h1 {
+            margin: 3em 0 1.6em 0;
+        }
+    }
+}
+
+.map {
+    width: 100%;
+    @include flex(row, center, center);
+
+    @include media($tablet) {
+        background: $altTextColor;
+        padding: 1.5vw 1.5vw;
+        border-radius: $borderradius;
+        margin-top: 3em;
+    }
+
+    iframe {
+        width: 100%;
+        border: none;
+        height: 50vh;
+
+        @include media($tablet) {
+            min-width: 100%;
+        }
+    }
+}
+
+//hiding the react select button 
+.css-b62m3t-container {
+    @include media($tablet) {
+        display: none;
+    }
+}
+
+//hiding the slash in between the react selectbutton
+.css-1okebmr-indicatorSeparator {
+    display: none !important;
+}

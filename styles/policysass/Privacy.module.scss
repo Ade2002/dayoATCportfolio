@@ -1,0 +1,78 @@
+@import "variables";
+
+.privacyPolicy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: $blue;
+  line-height: 2;
+
+  .privacyBox {
+    h1 {
+      font-size: 8vh;
+      color: $white;
+      letter-spacing: 2.5px;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      color: $white;
+    }
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: max-content; */
+    /*margin: 3% auto; */
+    /* display: grid; */
+    /* grid-template-columns: auto auto auto auto; */
+    flex-wrap: wrap;
+
+    @media screen and (max-width:800px) {
+      background-color: inherit;
+      border: none;
+    }
+
+    @media screen and (max-width: 532px) {
+      /* grid-template-columns: auto auto; */
+    }
+
+    .privacybutton {
+      color: $black;
+      white-space: nowrap;
+      margin: 10px;
+      padding: 2vh 2vw;
+      width: 20%;
+      /* min-width: 20%; */
+      /* background-color: $white; */
+      border-radius: 8px;
+      background-color: white;
+      border-color: white;
+
+      &:checked {
+        background-color: $black;
+        border-color: $black;
+        color: $white;
+      }
+
+      @media screen and (max-width: 800px) {
+        min-width: 43%;
+        /*  margin: 5px;
+        padding: 1vh 0vw; */
+      }
+    }
+  }
+}
+
+.active {
+  color: $white !important;
+  transition-duration: 0.5s;
+  background-color: rgba(155, 102, 216, 0.466) !important;
+  border: solid;
+  border-color: rgba(155, 102, 216, 0.466) !important;
+}

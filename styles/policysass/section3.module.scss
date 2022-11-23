@@ -1,0 +1,49 @@
+@import "variables";
+
+.clarification {
+    padding: 2em 0;
+    text-align: center;
+    background-color: $blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+        color: white;
+        text-align: center;
+        font-size: 5vw;
+
+        @media screen and (min-width: 800px) {
+            font-size: 2vw;
+        }
+    }
+
+    a {
+        transition-duration: 0.6s;
+        cursor: pointer;
+        margin-top: 25px;
+        padding: 2.5vh 3vw;
+        border-radius: 8px;
+        color: $white;
+    }
+
+    .btn2 {
+        border: 2px solid $white;
+        color: white;
+        background-color: inherit;
+        margin: 0;
+        padding: 0.4em 2em;
+        &:hover {
+            transition-duration: 0.5s;
+            background-color: $white;
+            color: $black;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        &:active {
+            background-color: $white;
+            color: $black;
+        }
+    }
+}

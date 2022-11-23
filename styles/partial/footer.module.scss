@@ -1,7 +1,7 @@
 @import "../modules/variables";
 @import "../modules/mixin";
 @import "../modules/classes";
-/* @import "./footerWithIsh"; */
+@import "./footerWithIsh";
 
 .footer {
   padding-top: $paddingHeight;
@@ -12,11 +12,28 @@
     display: block;
   }
 
+   @include media {
+    padding: 1 * $headerHeight 0 3 * $paddingHeight;
+  }
+
+  @include media($laptop) {
+    padding: 2.5 * $headerHeight 0 3 * $paddingHeight;
+  }
+
+  @include media(1800px) {
+    padding: 2.5 * $headerHeight 0 3 * $paddingHeight;
+  }
 
   section {
     margin-bottom: 0;
     padding-left: 7vw;
     padding-right: 7vw;
+  }
+
+  background-color: $black;
+
+  * {
+    color: $footerColor;
   }
 
   a,
@@ -80,15 +97,14 @@
 
   .socials {
     .follow {
-      align-items: center;
       a {
-        margin: 0.5em 3 * $smallpadding;
+        margin: 0 3 * $smallpadding;
         transform: scale(1.2);
-        text-align: center;
 
         @include media {
           margin: 0 2 * $smallpadding;
           transform: none;
+
         }
       }
     }
@@ -111,9 +127,5 @@
 
   .allRightReserved {
     text-align: center;
-
-    svg {
-      margin-right: 1em;
-    }
   }
 }

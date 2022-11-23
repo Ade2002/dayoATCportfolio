@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "varibles";
+@import "classes";
+@import "reset";
+
+.CardForm {
+  span {
+
+    @media screen and (min-width: 800px) {
+      width: 48%;
+    }
+  }
+}
+
+.flex {
+  display: flex
+}
+
+.none {
+  display: none;
+}
+
+.heroContainer {
+  background-color: $herobg;
+  padding: 30px 0;
+  position: relative;
+
+  @media screen and (min-width: $minLap) {
+    padding: 50px 0;
+  }
+
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    @media screen and (min-width: 400px) {
+      margin-top: 2vh;
+    }
+
+    @media screen and (min-width: $minLap) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .leftSide {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      @media screen and (min-width: $minLap) {
+        width: 50%;
+      }
+
+      h3 {
+        color: $deepBlue;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 30px;
+      }
+
+      h2 {
+        color: $pageText;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 45px;
+
+        @media screen and (min-width: 380px) {
+          font-size: 28px;
+        }
+
+        @media screen and (min-width: $tab) {
+          font-size: 35px;
+        }
+
+        @media screen and (min-width: $minLap4) {
+          font-size: 50px;
+        }
+
+        span {
+          display: block;
+        }
+      }
+
+      p {
+        color: $pageText;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 29px;
+
+        @media screen and (min-width: $minLap4) {
+          span {
+            display: block;
+            margin-top: 9px;
+          }
+        }
+      }
+    }
+
+    .rightSide {
+      @media screen and (min-width: $mobile) {
+        width: 90%;
+      }
+
+      @media screen and (min-width: $minLap) {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .mobile {
+        @media screen and (min-width: $minLap) {
+          display: none;
+        }
+      }
+
+      .desktopImg {
+        @media screen and (min-width: $minLap) {
+          width: 527px;
+
+          img {
+            width: 90%;
+          }
+        }
+
+        @media screen and (min-width: 1300px) {
+          img {
+            width: 100%;
+          }
+        }
+
+        @media screen and (max-width: 1022px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.Offercontainer {
+  padding: 35px 0;
+
+  button {
+    margin: 0;
+  }
+
+  @media screen and (min-width: $tab) {
+    padding: 60px 0;
+  }
+
+  .offerContents {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+
+    .titleArea {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      h4 {
+        position: relative;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: 0;
+          width: 147px;
+          height: 3px;
+          border-radius: 3px;
+          background-color: $deepBlue;
+        }
+      }
+
+      h3 {
+        span {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 32px;
+          color: $pageText;
+
+          @media screen and (min-width: 460px) {
+            display: block;
+          }
+
+          @media screen and (min-width: $tab) {
+            font-size: 25px;
+          }
+
+          @media screen and (min-width: $minLap2) {
+            font-size: 30px;
+            line-height: 45px;
+          }
+        }
+      }
+    }
+
+    .whatWeOffer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      @media screen and (min-width: $mobile) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+
+      @media screen and (min-width: $minLap2) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4rem;
+        width: 100%;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+
+        h3 {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 26px;
+          color: $black;
+
+          @media screen and (min-width: $tab) {
+            font-size: 20px;
+          }
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+          color: $black;
+          text-align: justify;
+
+          @media screen and (min-width: $tab) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.AvailableSpaceContainer {
+  background-color: $herobg;
+
+  button {
+    margin: 0;
+  }
+
+  .AvailableSpace {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    h3 {
+      font-family: $font2;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 33px;
+      color: $greenText;
+
+      @media screen and (min-width: $minLap) {
+        display: none;
+      }
+    }
+
+    .roomsArea {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (min-width: $mobile) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+
+      @media screen and (min-width: $minLap2) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+        width: 100%;
+      }
+
+      .card {
+        background-color: $white !important;
+        border-radius: 8.13624px;
+
+        .japata {
+          position: relative;
+
+          .durations {
+            position: absolute;
+            bottom: 1em;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: none;
+            align-items: flex-start;
+
+            i {
+              color: white;
+              background-color: $deepBlue;
+              padding: 1em;
+              border-radius: 20px;
+              font-size: 10px;
+            }
+          }
+        }
+
+        &:nth-child(4),
+        &:last-child {
+          display: none;
+
+          @media screen and (min-width: $mobile) {
+            display: block;
+          }
+        }
+
+        .textArea {
+          padding: 20px 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          h4 {
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 30px;
+            color: $black;
+
+            @media screen and (min-width: $minLap) {
+              font-size: 20px;
+            }
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 13.5604px;
+            line-height: 20px;
+            text-align: justify;
+            color: $black;
+
+            @media screen and (min-width: $minLap) {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.VisualOfficeContainer {
+  background-image: url(../../public/desktopV.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 429px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .officeContent {
+    .textContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      button {
+        margin: 0;
+        background-color: white;
+        color: black;
+        border: none;
+      }
+
+      h2,
+      p,
+      span {
+        color: $white;
+      }
+
+      h2 {
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 34px;
+        text-align: justify;
+
+        @media screen and (min-width: $tab) {
+          font-size: 25px;
+        }
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 26px;
+        text-align: center;
+
+        @media screen and (min-width: $tab) {
+          font-size: 18px;
+        }
+
+        @media screen and (min-width: $minLap) {
+          font-size: 18px;
+
+          span {
+            display: block;
+            margin-top: 5px;
+            text-align: center;
+          }
+        }
+      }
+
+      .offerContentsBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $black !important;
+          background-color: $white !important;
+        }
+      }
+    }
+  }
+}

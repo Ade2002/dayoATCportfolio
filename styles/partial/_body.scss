@@ -10,71 +10,52 @@
     height: 100%;
   }
 
-  &#hero {
-    background-image: url(../../public//snakeBG.png), url(../../public//springBG.png), url(../../public//kiteBG.png);
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-attachment: fixed, fixed, fixed;
-    background-position: -30px 190px, 0 80px, 550px 60px;
-    justify-content: space-between;
-    background-size: 40% 65%, auto, auto;
-
-    .heroText {
+  &#academy {
+    div {
       padding-top: $headerHeight;
       width: 100%;
 
-      span {
-        p {
-          text-align: start;
-        }
-      }
-
       @include media {
-        padding-top: 0 * $headerHeight;
+        padding-top: 0.2 * $headerHeight;
         max-width: 45%;
       }
     }
 
-    .heroImg {
-      padding-top: 2em;
+    img {
+      width: 100%;
+      transform: scale(1.15);
+      animation-duration: 4s;
+      clip-path: polygon(0% 0%, 100% 1%, 100% 100%, 0% 100%);
 
-      img {
-        width: 100%;
-        transform: scale(1.15);
-        animation-duration: 4s;
-        clip-path: polygon(0% 0%, 100% 1%, 100% 100%, 0% 100%);
+      @include media {
+        transform: scale(1.1);
 
-        @include media {
-          transform: scale(1.1);
-
-          /*  &:last-child {
-            display: none;
-          } */
-
-          width: 85%;
-          min-width: 80%;
-
-          transform: translate(3.125%, 0) scale(1.1);
+        &:last-child {
+          display: none;
         }
-      }
 
-      .socials {
-        justify-content: flex-end;
-        width: 100%;
-        margin-top: 0.5em;
-
-        a {
-          margin-left: 1em;
-        }
+        min-width: 53.8%;
+        width: 53.8%;
+        transform: translate(3.125%, 0) scale(1.1);
       }
     }
 
+    @include media {
+      flex-direction: row;
+
+      background: {
+        image: url(../../public/circleBackground.svg);
+        repeat: no-repeat;
+        position: 200% -100%;
+        size: 75% 75%;
+      }
+    }
   }
 
   &.affiliates {
     flex-wrap: wrap;
 
     &:first-child {
-
       //margin-top: 5vh;
       img {
         margin-top: 18 * $smallMargin;
@@ -100,166 +81,135 @@
     }
   }
 
-  &#services {
-    justify-content: space-between;
-    background: #292929;
-    padding-top: $headerHeight;
+  &#acad {
+    > div {
+      &.tablet,
+      &.flex_r {
+        width: 100%;
+        justify-content: center;
+        align-content: center;
 
-    div {
-      padding-top: 0 * $headerHeight;
-      width: 100%;
+        &.affiliates {
+          flex-wrap: wrap;
 
-      @include media {
-        padding-top: 0.2 * $headerHeight;
-        max-width: 45%;
+          &:first-child {
+            //margin-top: 5vh;
+            img {
+              margin-top: 18 * $smallMargin;
+
+              @include media {
+                margin-top: 8 * $smallMargin;
+              }
+            }
+          }
+
+          img {
+            filter: opacity(0.3);
+            object-fit: scale-down;
+            object-position: left;
+            width: 25.3%;
+            margin-top: 8 * $smallMargin;
+
+            @include media {
+              margin-top: 0 * $smallMargin;
+              width: 16%;
+              object-position: center;
+            }
+          }
+        }
+
+        &.academy {
+          img {
+            width: 24%;
+            //height: 320px;
+            margin: 3 * $paddingHeight 1.5 * $smallMargin;
+            object-fit: contain;
+            border-radius: 2 * $borderRadius;
+            image-rendering: pixelated;
+
+            &:hover {
+              /* filter: sepia(100%) hue-rotate(90deg)
+              drop-shadow(8px 8px 10px gray); */
+              // object-fit: cover;
+              transform: scale(1.1);
+              filter: grayscale(100%);
+              box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+              transition: all 500ms ease;
+            }
+
+            @include media(1440px) {
+              //height: 55vh;
+            }
+          }
+        }
       }
-    }
 
-    img {
-      width: 100%;
-      transform: scale(1.15);
-      animation-duration: 4s;
-      clip-path: polygon(0% 0%, 100% 1%, 100% 100%, 0% 100%);
-      /* align-self: flex-start; */
+      &.note {
+        @include media {
+          width: 70%;
+          text-align: center;
+        }
 
-      @include media {
-        transform: scale(1.1);
-        min-width: 50%;
-        width: 50%;
-        transform: translate(3.125%, 0) scale(1.1);
-      }
-    }
-
-    @include media {
-      flex-direction: row;
-
-      background: {
-        image: url(../../public/circleBackground.svg);
-        repeat: no-repeat;
-        position: 400% 0%;
-        size: 90% 99%;
+        @include media($laptop) {
+          width: 65%;
+        }
       }
     }
   }
 
-  &#connect {
-    padding-top: 0 * $paddingHeight;
+  &#qhse {
+    background-color: $deepBlue;
+    padding-top: 4 * $paddingHeight;
 
-    >div {
-      align-self: flex-start;
+    * {
+      color: #fff;
     }
 
-    .socials {
-      justify-content: flex-start;
-      width: 100%;
-      margin-top: 2em;
-
-      a {
-        margin-left: 1em;
-
-        &:first-child {
-          margin-left: 0;
-        }
-      }
-    }
-
-    form {
-      margin-top: 0;
-      width: 100%;
-
-      button {
-        background: $myOrange;
-        border-color: $myOrange;
-        margin: 2em 0 0 0;
-        justify-self: start;
-        width: 120px;
-      }
-
-      h5 {
-        padding: 0;
-        margin: 2em 0;
-        grid-column: 1/ span 2;
-      }
-
-      span {
-        margin-bottom: 0.5em;
-
-        i {
-          font-size: 10px;
-          font-style: normal;
-          color: red;
-        }
-
-        fieldset {
-          border: 1px solid $myOrange;
-          border-radius: 4px;
-          height: 3.65em;
-          padding: 0 0 2em 1em;
-          width: 100%;
-          margin-bottom: 0.5em;
-
-          label {
-            color: $myOrange;
-            font-size: 14px;
-          }
-
-          legend {
-            padding-bottom: 0.2em;
-
-          }
-
-          input,
-          select {
-            width: 100%;
-            background-color: inherit;
-            color: #857C7C;
-            font-size: 12px;
-
-            &:-internal-autofill-selected {
-              appearance: menulist-button;
-              background-image: none !important;
-              background-color: transparent !important;
-              color: $myOrange !important;
-            }
-          }
-
-          div {
-            margin: 0;
-          }
-        }
-
-        &:nth-child(4) {
-          height: 7em;
-
-          fieldset {
-            height: 5em;
-          }
-        }
-
-      }
+    a {
+      border: none;
+      background-color: #0135d6;
+      box-shadow: 2px 2px #000;
+      box-shadow: 0 0 3px rgba(60, 72, 88, 15);
 
       @include media {
-        padding-bottom: 0;
-        margin-bottom: 0;
+        align-self: flex-start;
+      }
+    }
+
+    img {
+      transform: translate(-3.125%, 0) scale(1.135);
+
+      @include media {
+        transform: translate(3.5%, -2.5%);
+        min-width: 50%;
+        width: 50%;
+        margin-right: 0;
+      }
+
+      @include media(1200px) {
+        min-width: 45%;
         width: 45%;
       }
     }
 
     @include media {
+      margin-top: 8 * $paddingHeight;
       align-items: center;
       justify-content: space-between;
 
       div {
-        max-width: 40%;
+        max-width: 50%;
       }
     }
   }
 
   &#steam {
     padding: 0;
-    background: linear-gradient(0deg,
-        #a5a6f6 -11.14%,
-        rgba(252, 221, 236, 0) 10.68%);
+    background: linear-gradient(
+      0deg,
+      #a5a6f6 -11.14%,
+      rgba(252, 221, 236, 0) 10.68%
+    );
 
     @include media {
       background: {
@@ -271,7 +221,7 @@
       }
     }
 
-    >div {
+    > div {
       padding: $contentPadding;
 
       &.note {
@@ -322,7 +272,7 @@
   &#workstation {
     padding: 0;
 
-    >div {
+    > div {
       padding: $contentPadding;
       align-items: flex-start;
 
@@ -333,7 +283,7 @@
           margin-top: 10%;
         }
 
-        >div {
+        > div {
           @include media($laptop) {
             width: 45%;
           }

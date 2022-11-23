@@ -14,7 +14,7 @@
   -ms-hyphens: auto;
   hyphens: auto;
   box-sizing: border-box;
-  color: $white;
+  color: $black;
   list-style: none;
   text-decoration: none;
   text-align: initial;
@@ -118,35 +118,21 @@ input:-internal-autofill-selected {
 //select classes
 
 html {
-  color: $white;
+  color: #000;
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: $defaultBackgroundColor;
-  color: $white;
+  background-color: #fff;
+  color: $black;
   background-position: center;
   width: 100%;
-  &::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: $black;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 50px;
-    background: $myOrange;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    transition-duration: 2s;
-  }
+  padding-top: 60px;
+  margin-bottom: -0.8em;
 }
 
 .mainMargin {
-  /* margin-top: 1.5vw !important;
+  margin-top: 1.5vw !important;
 
   @include media(400px) {
     margin-top: 5em !important;
@@ -170,7 +156,7 @@ body {
 
   @include media(940px) {
     margin-top: 5em !important;
-  } */
+  }
 }
 
 ::selection {
@@ -359,6 +345,8 @@ p {
   text-align: justify;
   word-break: keep-all;
   @include margin(2);
+  color: rgba($color: $black, $alpha: 0.59);
+
   @include media(425px) {
     font-size: 3.6vw;
   }

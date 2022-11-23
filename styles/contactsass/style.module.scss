@@ -1,0 +1,284 @@
+@import "../faqsass/variable";
+@import "../faqsass/mixin";
+
+#footerid {
+    display: none;
+}
+
+#bar {
+    display: flex;
+    padding-top: 1em;
+
+    @include media {
+        display: none;
+    }
+}
+
+#backdrop {
+    display: flex;
+    width: 100%;
+}
+
+.none,
+#none {
+    display: none !important;
+
+    @include media {
+        display: flex !important;
+    }
+
+    &_d {
+        display: flex;
+
+        @include media {
+            display: none;
+        }
+    }
+
+    &_t {
+        display: none !important;
+
+        @include media {
+            display: flex !important;
+        }
+    }
+
+}
+
+.animateBlue {
+    animation-name: animateBlue;
+    animation-duration: 2s;
+    transition: left 1s;
+    position: relative;
+}
+
+@keyframes animateBlue {
+    0% {
+        left: -500px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+.paddingSide {
+    padding: 0 1.5em;
+
+    @include media($tablet) {
+        display: flex;
+        padding: 0 5.5em;
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.alignSelf_Fs {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+.whiteBg {
+    background-color: #fff;
+    padding: 0 1.5em;
+}
+
+.fillBlack {
+    fill: black;
+
+    path {
+        stroke: black;
+    }
+}
+
+#contact {
+    background-color: #11088A;
+    font-size: 100%;
+    position: relative;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    @include media {
+        display: flex;
+        margin-top: 2em;
+    }
+
+    #blueArea {
+        height: 100%;
+        width: 100%;
+        font-size: 100%;
+
+        * {
+            color: #fff;
+            text-align: left;
+        }
+
+        .footer {
+            margin-top: 1em;
+        }
+
+        @include media {
+            width: 40%;
+            display: flex;
+            padding-bottom: 0;
+        }
+
+        .iconsText {
+            margin-top: 1.5em;
+
+            p {
+                padding: 0 0 0 0.8em;
+            }
+
+            a {
+                margin: 0 1em 0 0;
+            }
+
+            &:last-child {
+                margin-top: 1em;
+                padding-bottom: 5em;
+
+                @include media {
+                    padding-bottom: 0;
+                }
+            }
+
+            @include media($tablet) {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        background: #fff;
+        padding: 0 5vw;
+        padding-bottom: 5vh;
+
+        @include media {
+            width: 60%;
+            display: flex;
+            justify-self: flex-start;
+            align-self: flex-start;
+            align-items: flex-start;
+        }
+
+        width: 100%;
+
+        h3 {
+            font-weight: 700;
+            font-size: 1em;
+            text-align: left;
+            align-self: flex-start;
+            padding: 0 1em;
+
+            @include media {
+                padding: 0;
+            }
+
+        }
+
+        form {
+            margin-top: 0;
+            width: 90%;
+
+            button {
+                background: #11088A;
+                border-color: #11088A;
+                margin: 2em 0 0 0;
+                justify-self: start;
+                grid-template-columns: 48% 48%;
+                grid-column: 1/ span 1;
+                width: 120px;
+            }
+
+            h5 {
+                padding: 0;
+                margin: 2em 0;
+                grid-column: 1/ span 2;
+            }
+
+            span {
+                margin-bottom: 0.5em;
+
+                i {
+                    font-size: 10px;
+                    font-style: normal;
+                    color: red;
+                }
+
+                fieldset {
+                    border: 1px solid #36488C;
+                    border-radius: 4px;
+                    height: 3.65em;
+                    padding: 0 0 2em 1em;
+                    width: 100%;
+                    margin-bottom: 0.5em;
+
+                    label {
+                        color: #555555;
+                        font-size: 14px;
+                    }
+
+                    legend {
+                        padding-bottom: 0.2em;
+
+                    }
+
+                    input,
+                    select {
+                        width: 100%;
+                        background-color: #fff;
+                        color: #857C7C;
+                        font-size: 12px;
+
+                        &:-internal-autofill-selected {
+                            appearance: menulist-button;
+                            background-image: none !important;
+                            background-color: transparent !important;
+                            color: fieldtext !important;
+                        }
+                    }
+
+                    div {
+                        margin: 0;
+                    }
+                }
+
+                &:nth-child(9),
+                h4 {
+                    grid-column: 1/ span 2;
+                }
+
+                &:nth-child(10) {
+                    grid-column: 1/ span 2;
+                    height: 7em;
+
+                    fieldset {
+                        height: 5em;
+                    }
+                }
+            }
+
+            @include media {
+                display: grid;
+                grid-template-columns: 48% 48%;
+                justify-content: space-between;
+                align-self: flex-start;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}

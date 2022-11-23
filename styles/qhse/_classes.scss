@@ -1,0 +1,112 @@
+.none {
+  display: none;
+}
+
+.db {
+  display: block;
+}
+
+.di {
+  display: inline;
+}
+.w100 {
+  width: 100%;
+}
+.contain {
+  width: 90%;
+  margin: 0 auto;
+}
+.pyx {
+  padding: 2vh 7vw;
+}
+.button {
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  max-height: 70px;
+  height: 8vh;
+  border-radius: 10px;
+  border: 2px solid #150c21;
+  white-space: nowrap;
+  vertical-align: middle;
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
+  margin: 4vh 0;
+}
+.getbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.img2 {
+  @media screen and (min-width: $minLap) {
+    display: none;
+  }
+}
+.dimg2 {
+  @media screen and (max-width: 1022px) {
+    display: none;
+  }
+}
+.textLeft {
+  text-align: left !important;
+}
+.ourBtn {
+  border: 1.5px solid #ffffff !important;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: transparent !important;
+  @media screen and (min-width: $minLap) {
+    display: none !important;
+  }
+}
+.heromain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: $btnBg;
+  color: $white;
+}
+.my0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.prevSwiper,
+.nextSwiper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50%;
+  z-index: 1;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  @media screen and (max-width: $tab) {
+    top: 28%;
+  }
+  @media screen and (min-width: $tab) {
+    background-size: 130%;
+  }
+}
+.prevSwiper {
+  left: 0;
+  background-image: url(../../public/arrowLeft.svg);
+}
+.nextSwiper {
+  right: 0;
+  background-image: url(../../public/arrowRight.svg);
+}
+.margin0M {
+  @media screen and (min-width: $minLap) {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+}

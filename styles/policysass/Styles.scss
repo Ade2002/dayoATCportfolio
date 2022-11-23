@@ -1,0 +1,25 @@
+@import "variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    padding: 2vh 7vw;
+    margin-bottom: 8%;
+}
+button{
+    transition-duration: 0.6s;
+    cursor: pointer;
+    margin-top: 25px;
+    padding: 2.5vh 3vw;
+    border-radius: 8px;
+    color: $white;
+}

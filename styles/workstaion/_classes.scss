@@ -1,0 +1,136 @@
+.btn {
+  width: 157px;
+  .button {
+    width: 100%;
+    background-color: $deepBlue;
+    border-radius: 0;
+    padding: 12px 14px;
+    color: $white;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 3px;
+    outline: none;
+    border-color: $deepBlue;
+  }
+}
+.contain {
+  width: 89%;
+  margin: 0 auto;
+}
+.d_none {
+  display: none !important;
+}
+.d_flex {
+  display: flex !important;
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1111;
+  place-items: center;
+}
+.ModalcardContent {
+  background-color: $white;
+  width: 90%;
+  min-height: 521px;
+  border-radius: 15px;
+  padding: 1rem !important;
+  @media screen and (min-width: $minLap) {
+    padding: 2rem 2rem !important;
+    width: 807px;
+  }
+  .Cardbody {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    .CardTitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h3 {
+        font-weight: 500;
+        font-size: 18px;
+        color: #555555;
+        @media screen and (min-width: $tab) {
+          font-size: 25px;
+          line-height: 38px;
+        }
+      }
+      img {
+        cursor: pointer;
+      }
+    }
+    .CardForm {
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        @media screen and (min-width: $tab) {
+          gap: 2rem;
+        }
+        .formContainer {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          @media screen and (min-width: $tab) {
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .formControl {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            border: 1px solid #36488c;
+            border-radius: 4px;
+            height: 58px;
+            width: 100%;
+
+            label {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 19px;
+              color: #555555;
+              position: absolute;
+              top: -10px;
+              left: 14px;
+              background: white;
+            }
+            input,
+            select {
+              width: 100%;
+              height: 100%;
+              padding-left: 10px;
+              background-color: transparent;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 16px;
+              color: #857c7c;
+              &::placeholder {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: #857c7c;
+              }
+            }
+            select {
+              padding: 1rem;
+              width: 94%;
+              display: flex;
+              flex-direction: column;
+              gap: 2rem;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

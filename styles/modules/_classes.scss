@@ -2,14 +2,6 @@
   color: $black !important;
 }
 
-.cOrange {
-  color: $myOrange;
-}
-
-.bgOrange {
-  background-color: $myOrange;
-}
-
 .backdrop {
   @include backdrop();
 }
@@ -177,6 +169,7 @@
 }
 
 .linkButton {
+  color: #fff;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -186,20 +179,20 @@
   max-height: 70px;
   height: 4 * $paddingHeight;
   border-radius: $borderRadius;
-  border: 2px solid $myOrange;
+  border: 2px solid $black;
   white-space: nowrap;
   vertical-align: middle;
   transition: all 0.3s ease-in-out;
   font-size: $defaultFontSize;
-  margin: 1em 0 0 0;
+  margin: 2 * $paddingHeight 0;
 
   &:hover {
-    opacity: .5;
+    background-color: white;
   }
 
   @include media {
+    margin: 4 * $paddingHeight 0;
     width: 24vw;
-    margin: 0 0 0 0;
   }
 
   @include media($laptop) {
@@ -210,13 +203,12 @@
 }
 
 .secondaryButton {
-  width: 100%;
+  width: 50vw;
   align-self: flex-start;
 
   @include media($tablet) {
     align-self: center;
     width: 24vw;
-    margin-left: 1em;
   }
 
   @include media($laptop) {
@@ -434,9 +426,8 @@
 }
 
 .FourOhFour {
+  background-image: url('../../public/doodles.png');
 
-  /*   background-image: url('../../public/doodles.png');
- */
   img {
     width: 90%;
     max-width: 400px;

@@ -74,8 +74,13 @@ const Services = () => {
         initial={{ opacity: 0, y: "100px" }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 3 }}
-        className={`wow animate__animated animate__slideInUp`}
-        src="myService.png"
+        className={`${LandingPageStyles.none_m} wow animate__animated animate__slideInUp`}
+        src="woman.png"
+        alt="woman"
+      />
+      <img
+        className={`wow animate__animated animate__fadeIn`}
+        src="womanMobile.png"
         alt="LaptopWomanFk"
       />
     </section>

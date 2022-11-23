@@ -1,0 +1,904 @@
+@use "./" as *;
+
+.herobg {
+  background-color: $heroBg;
+  margin: 0;
+  position: relative;
+  .herocontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 0px;
+    width: 90%;
+    margin: 0 auto;
+    @media screen and (min-width: $minLap) {
+      flex-direction: row;
+      padding: 2vh 7vw;
+    }
+    .leftside {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 0;
+      @media screen and (min-width: $minLap) {
+        margin: 5rem 0;
+        margin-bottom: 1rem;
+      }
+      h3,
+      h2,
+      p,
+      span {
+        color: $white;
+        text-align: center;
+        @media screen and (min-width: $minLap) {
+          text-align: left;
+        }
+      }
+      h3 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        @media screen and (min-width: $minLap) {
+          font-size: 30px;
+        }
+      }
+      h2 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        span {
+          display: block;
+        }
+        @media screen and (min-width: $tab) {
+          font-size: 45px;
+          line-height: 42px;
+        }
+        @media screen and (min-width: $minLap) {
+          font-size: 30px;
+          span {
+            display: inline;
+          }
+        }
+        @media screen and (min-width: 1254px) {
+          font-size: 35px;
+        }
+        @media screen and (min-width: $minLap4) {
+          font-size: 42px;
+          width: 83%;
+        }
+      }
+      p {
+        font-size: 18px;
+        font-weight: 300 !important;
+        line-height: 28px;
+        @media screen and (min-width: $tab) {
+          font-size: 30px;
+          line-height: 42px;
+        }
+        @media screen and (min-width: $minLap) {
+          font-size: 20px;
+          line-height: 42px;
+          color: rgba(255, 255, 255, 0.9);
+          width: 80%;
+        }
+      }
+      .herobtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        @media screen and (min-width: $minLap) {
+          width: 300px;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .rightside {
+    @media screen and (min-width: $minLap4) {
+      width: 950px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+.m0 {
+  margin: 0;
+  box-sizing: border-box;
+}
+.clientArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 20px 0;
+  .titleArea {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 30px;
+    h2,
+    p {
+      text-align: center;
+    }
+    h2 {
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 125%;
+      color: $dark1;
+      @media screen and (min-width: $tab) {
+        font-size: 30px;
+      }
+      @media screen and (min-width: $minLap) {
+        font-size: 40px;
+        span {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+    p {
+      span {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: $textGray !important;
+        @media screen and (min-width: $tab) {
+          font-size: 25px;
+          line-height: 45px;
+        }
+        @media screen and (min-width: $minLap) {
+          display: block;
+          text-align: center;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .mobileClient {
+    width: 93%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    h3 {
+      font-weight: 500;
+      font-size: 17px;
+    }
+    @media screen and (min-width: $tab) {
+      display: none;
+    }
+  }
+  .desktopClient {
+    width: 100%;
+    @media screen and (min-width: $minLap) {
+      width: 90%;
+    }
+    .clientsImg,
+    .clientsName {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      @media screen and (min-width: $minLap) {
+        justify-content: space-between;
+      }
+      .clients {
+        width: 90px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .clientsName {
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+.whyContent {
+  padding: 50px 0;
+  .titleArea {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    h3,
+    p {
+      text-align: center;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 125%;
+      color: $dark1;
+      @media screen and (min-width: $tab) {
+        font-size: 30px;
+      }
+    }
+    p {
+      span {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: rgba(21, 12, 33, 0.7);
+        @media screen and (min-width: 351px) {
+          font-size: 20px;
+        }
+        @media screen and (min-width: $tab) {
+          font-size: 25px;
+          line-height: 45px;
+        }
+        @media screen and (min-width: $minLap) {
+          display: block;
+          text-align: center;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .mobileCards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    .cardContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        h3,
+        p {
+          text-align: center;
+        }
+        h3 {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 125%;
+          color: $dark1;
+          @media screen and (min-width: $tab) {
+            font-size: 30px;
+          }
+        }
+        p {
+          span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            display: block;
+            color: rgba(21, 12, 33, 0.7);
+            text-align: center;
+            @media screen and (min-width: 398px) {
+              font-size: 20px;
+            }
+            @media screen and (min-width: $tab) {
+              font-size: 25px;
+              line-height: 45px;
+            }
+            @media screen and (min-width: $minLap) {
+              display: block;
+              text-align: center;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (min-width: $minLap) {
+      display: none;
+    }
+  }
+  .desktopCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 4rem;
+    .desktopCardContainer {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      .cards {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2rem;
+        border-left: 1px solid #c4c4c4;
+        padding: 0 1rem;
+        @media screen and (min-width: 1269px) {
+          padding-left: 2rem;
+        }
+        &:nth-child(1) {
+          border: none;
+        }
+        .card {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 0.5rem;
+          width: 109%;
+          img {
+            margin: 0;
+          }
+          h3,
+          p {
+            text-align: left;
+          }
+          h3 {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 125%;
+            color: $dark1;
+            @media screen and (min-width: $minLap2) {
+              font-size: 24px;
+            }
+          }
+          p {
+            span {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 26px;
+              display: block;
+              color: rgba(21, 12, 33, 0.7);
+              text-align: left;
+              @media screen and (min-width: $minLap2) {
+                font-size: 19px;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1022px) {
+      display: none;
+    }
+  }
+}
+.how {
+  padding: 20px 0;
+  .Howarea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    @media screen and (min-width: $minLap) {
+      gap: 3rem;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 125%;
+      color: $dark1;
+      @media screen and (min-width: $tab) {
+        font-size: 40px;
+        font-weight: 500;
+      }
+    }
+    .howContents {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+
+      .Images {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgba(17, 8, 138, 0.5);
+        border-radius: 50%;
+        width: 90%;
+        height: 250px;
+        flex-direction: column;
+        &:nth-child(2) {
+          border: 2px solid #48d5e5;
+          .img {
+            background: #48d5e5 !important;
+            @media screen and (min-width: $minLap) {
+              top: -43px;
+              left: 21%;
+            }
+          }
+        }
+        &:last-child {
+          .img {
+            left: 76%;
+          }
+        }
+        @media screen and (min-width: $minLap) {
+          width: 314.43px;
+          height: 314.43px;
+          padding: 3rem;
+          &:first-child {
+            transform: translateX(45px);
+          }
+          &:last-child {
+            transform: translateX(-45px);
+          }
+        }
+        h4 {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 125%;
+          text-align: center;
+          color: #150c21;
+          width: 45%;
+          @media screen and (min-width: $tab) {
+            font-size: 30px;
+          }
+          @media screen and (min-width: $minLap) {
+            width: 75%;
+          }
+        }
+        p {
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 158.5%;
+          text-align: center;
+        }
+        .img {
+          position: absolute;
+          background: #8884c5;
+          width: 77px;
+          height: 77px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          top: 0;
+          left: -20px;
+          img {
+            width: 50%;
+          }
+        }
+      }
+
+      @media screen and (min-width: $minLap) {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+    .howbtn {
+      background-color: $heroBg;
+      border-color: $heroBg;
+      @media screen and (min-width: $minLap) {
+        width: 18vw;
+      }
+    }
+  }
+}
+.deliverdcon {
+  background-image: url(../../public/circle.svg);
+  background-repeat: no-repeat;
+  background-position: 619% -38%;
+  background-size: 93% 80%;
+}
+.delieved {
+  padding-top: 30px !important;
+  padding-bottom: 40px !important;
+  @media screen and (min-width: $minLap) {
+    padding-left: 0 !important;
+  }
+  .detailbtn {
+    width: 100%;
+    margin-top: 30px;
+    @media screen and (min-width: $minLap) {
+      width: 0;
+      margin: 0;
+    }
+  }
+  .leftside {
+    gap: 0rem !important;
+    margin-top: 40px !important;
+    @media screen and (min-width: $minLap) {
+      gap: 2rem !important;
+    }
+    h2 {
+      font-size: 23px !important;
+      margin: 0;
+      span {
+        color: $blue2 !important;
+        font-size: 23px !important;
+        display: inline !important;
+        @media screen and (min-width: $tab) {
+          font-size: 45px !important;
+          line-height: 52px;
+        }
+        @media screen and (min-width: $minLap) {
+          display: block !important;
+          font-size: 30px !important;
+          line-height: 125%;
+        }
+        @media screen and (min-width: $minLap4) {
+          font-size: 36px !important;
+        }
+      }
+      @media screen and (min-width: $minLap4) {
+        width: 100% !important;
+      }
+    }
+    p {
+      font-size: 18px !important;
+      span {
+        color: rgba(255, 255, 255, 0.9) !important;
+      }
+      @media screen and (min-width: $minLap4) {
+        font-size: 25px !important;
+      }
+    }
+    .detail {
+      display: none !important;
+      @media screen and (min-width: $minLap) {
+        display: flex !important;
+      }
+    }
+  }
+  .rightside {
+    .mobileImages {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1.5rem;
+      div {
+        @media screen and (min-width: 520px) {
+          width: 90vw;
+        }
+        @media screen and (min-width: $minLap) {
+          width: 50vw;
+        }
+        &:first-child {
+          width: 295px;
+          @media screen and (min-width: 530px) {
+            width: 100%;
+          }
+        }
+        &:nth-child(2) {
+          width: 255px;
+          @media screen and (min-width: 530px) {
+            width: 100%;
+          }
+        }
+        &:last-child {
+          @media screen and (min-width: $tab) {
+            width: 60vw;
+          }
+        }
+      }
+      @media screen and (min-width: $minLap) {
+        display: none;
+      }
+    }
+    .desktopImg {
+      transform: translateX(30px);
+
+      @media screen and (max-width: 1022px) {
+        display: none;
+      }
+    }
+  }
+}
+.choose {
+  .whyContentArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 40px 0;
+    position: relative;
+    .titleArea {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      @media screen and (min-width: $minLap) {
+        gap: 0.5rem;
+      }
+      h3,
+      p {
+        text-align: center;
+        span {
+          display: block;
+          text-align: center;
+          @media screen and (min-width: 530px) {
+            display: inline;
+          }
+        }
+      }
+      h3 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 125%;
+        color: rgba(21, 12, 33, 0.9);
+        @media screen and (min-width: 530px) {
+          font-size: 30px;
+        }
+        @media screen and (min-width: $minLap4) {
+          font-size: 40px;
+        }
+      }
+      p {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 125%;
+        color: rgba(21, 12, 33, 0.7);
+        @media screen and (min-width: 530px) {
+          font-size: 20px;
+        }
+        @media screen and (min-width: $minLap4) {
+          font-size: 25px;
+        }
+      }
+    }
+    .slidersCon {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .slideDatas {
+        display: flex;
+        width: 288px;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: 360px) {
+          width: 100%;
+        }
+        .cardContainerContent {
+          width: 100%;
+          position: relative;
+          @media screen and (min-width: $minLap) {
+            display: flex;
+            background-color: $white;
+            border: 1px solid #ded9d9;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 35px;
+            width: 82%;
+            height: 280px;
+            gap: 2rem;
+          }
+          @media screen and (min-width: 1300px) {
+            width: 1048px;
+          }
+          .imageCon {
+            width: 67px;
+            margin: 0 auto;
+            @media screen and (min-width: 360px) {
+              width: 38%;
+            }
+            @media screen and (min-width: $mobile) {
+              width: 48%;
+              transform: translateY(10px);
+            }
+            @media screen and (min-width: $minLap) {
+              transform: scale(123%) translateY(5px);
+            }
+            @media screen and (min-width: 1265px) {
+              transform: scale(102%) translateY(-25px) translateX(-10px);
+            }
+            img {
+              width: 100%;
+              transform: translateY(20px);
+              z-index: 10;
+            }
+          }
+          .card {
+            padding: 1rem;
+            background-color: $white;
+            border: 1px solid #ded9d9;
+            width: 288px;
+            min-height: 102px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            z-index: -1;
+            @media screen and (min-width: 360px) {
+              width: 99%;
+              margin: 0;
+            }
+            @media screen and (min-width: $mobile) {
+              padding: 2rem 1rem;
+            }
+            @media screen and (min-width: $minLap) {
+              background-color: transparent;
+              z-index: inherit;
+              padding: 1rem;
+              min-height: 0;
+              border: none;
+            }
+            p {
+              font-weight: 400;
+              font-size: 11px;
+              line-height: 158.5%;
+              text-align: center;
+              color: rgba(21, 12, 33, 0.7);
+              @media screen and (min-width: 420px) {
+                font-size: 13px;
+              }
+              @media screen and (min-width: $mobile) {
+                font-size: 18px;
+              }
+              @media screen and (min-width: $tab) {
+                font-size: 20px;
+              }
+              @media screen and (min-width: $minLap) {
+                text-align: left;
+              }
+              @media screen and (min-width: 1100px) {
+                width: 100%;
+                span {
+                  width: 100%;
+                  display: block;
+                  text-align: left;
+                  margin-top: 5px;
+                }
+              }
+            }
+            h3 {
+              font-weight: 600;
+              font-size: 10px;
+              line-height: 158.5%;
+              color: $dark1;
+              @media screen and (min-width: 420px) {
+                font-size: 13px;
+              }
+              @media screen and (min-width: $mobile) {
+                font-size: 18px;
+              }
+              @media screen and (min-width: $minLap) {
+                text-align: left !important;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.issues {
+  background-color: $heroBg;
+  .reportArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: $minLap) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding: 40px 0;
+    }
+    .reportImg {
+      @media screen and (min-width: $minLap) {
+        flex: 1;
+      }
+      @media screen and (min-width: 1240px) {
+        img {
+          width: 544px;
+        }
+      }
+    }
+    .subject {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-bottom: 50px;
+      @media screen and (min-width: $minLap) {
+        width: 50%;
+      }
+      h3,
+      span {
+        color: $blue2;
+        text-align: center;
+        @media screen and (min-width: $minLap) {
+          text-align: left;
+        }
+      }
+      h3 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 125%;
+        span {
+          display: block;
+        }
+        @media screen and (min-width: 540px) {
+          display: block !important;
+          font-size: 30px !important;
+          line-height: 125%;
+        }
+        @media screen and (min-width: $minLap) {
+          font-size: 36px !important;
+        }
+      }
+      .form {
+        .myform {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: 1.5px solid #ffffff;
+          border-radius: 7px;
+          height: 44px;
+          width: 86vw;
+          padding: 0 19px;
+          gap: 1rem;
+          @media screen and (min-width: $minLap) {
+            width: 350px;
+            height: 60px;
+          }
+          input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            color: $white;
+            font-weight: 400;
+            font-size: 14px;
+            outline: none;
+            border-radius: 7px;
+            &::placeholder {
+              color: $white;
+              font-size: 14px;
+              font-weight: 400;
+            }
+            @media screen and (min-width: 540px) {
+              font-size: 18px;
+              &::placeholder {
+                font-size: 18px;
+              }
+            }
+          }
+          .but {
+            button {
+              margin: 0 8px;
+              background: transparent;
+              border: none;
+              @media screen and (min-width: $tab) {
+                width: 0;
+                img {
+                  height: 23px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
