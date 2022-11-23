@@ -15,7 +15,6 @@ const Services = () => {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 3 }}
-          className={`cOrange`}
         >
           <svg
             width="54"
@@ -49,21 +48,8 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}
         >
-          Hello! My name is Sikiru Ademola, and I like to produce content on the
-          internet. The decision to attempt creating custom WordPress themes
-          sparked my interest in web development and led to a long-term passion
-          for the field.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 200 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2 }}
-        >
-          My primary emphasis these days is creating accessible, inclusive
-          products and digital experiences at African Trainovation Hub for a
-          range of customers. Fast-forward to now, and I&apos;ve had the
-          pleasure of working on several projects utilizing diverse tools like
-          as HTML, CSS, JAVASCRIPT, and REACT JS.
+          Of course, there’s so much more to me than just a few fancy titles.
+          Scroll down and get to know me,
         </motion.p>
         <div
           className={`${LandingPageStyles.flex_cr} ${LandingPageStyles.buttons}`}
