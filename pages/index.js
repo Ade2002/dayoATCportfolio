@@ -14,11 +14,11 @@ import Connect from '../components/Home/Connect'
 export default function Home () {
   return (
     <General>
-      <Hero />
       <Acad />
+      <Hero />
       <StartLearn />
-      {/* <Courses /> */}
       <AreYou />
+      {/* <Courses /> */}
       {/* <LearnWithUs /> */}
       {/* <HowItWorks /> */}
       {/* <Testimonials /> */}
