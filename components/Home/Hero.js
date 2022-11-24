@@ -13,39 +13,62 @@ const Hero = () => {
       id={`${LandingPageStyles.academy}`}
     >
       <div>
-        <motion.h1
+        <motion.span
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 3 }}
         >
-          It&#39;s time to learn and acquire&shy; digital&shy; Tech skills.
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          <svg
+            width="54"
+            height="5"
+            viewBox="0 0 54 5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="2.5"
+              y1="2.5"
+              x2="51.5"
+              y2="2.5"
+              stroke="#333333"
+              strokeWidth="5"
+              strokeLinecap="round"
+            />
+          </svg>{" "}
+          Hello
+        </motion.span>
+        <motion.h2
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}
         >
-          Acquire the 21st century skills so as to improve your relevance and
-          employability in this ever changing world.
+          I’m Sarah Jackson
+        </motion.h2>
+        <h3>
+          A UX / UI designer, product designer, content creator and creative
+          director.
+        </h3>
+        <motion.p
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 2 }}
+        >
+          Of course, there’s so much more to me than just a few fancy titles.
+          Scroll down and get to know me,
         </motion.p>
-        <LinkButtons
-          classes={`${HeaderStyles.linkButton} ${HeaderStyles.bgBlack} wow animate__animated animate__fadeInDown`}
-          contents={`Get Started`}
-          to={`www.acadon.atc.com.ng`}
-        />
       </div>
       <motion.img
-        initial={{ opacity: 0, y: '100px' }}
+        initial={{ opacity: 0, y: "100px" }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 3 }}
-        className={`${LandingPageStyles.none_m}  wow animate__animated animate__fadeIn`}
-        src='LaptopWomanFk.png'
-        alt='LaptopWomanFk'
+        className={`${LandingPageStyles.none_m} wow animate__animated animate__slideInUp`}
+        src="woman.png"
+        alt="woman"
       />
       <img
         className={`wow animate__animated animate__fadeIn`}
-        src='laptopWomanMobile.png'
-        alt='LaptopWomanFk'
+        src="womanMobile.png"
+        alt="LaptopWomanFk"
       />
     </section>
   )
