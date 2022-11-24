@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import General from '../components/general/general'
 import Hero from '../components/Home/Hero'
-import Acad from '../components/Home/MyProjects'
+/* import Acad from '../components/Home/MyProjects' */
 import StartLearn from '../components/Home/startLearn'
 import AreYou from '../components/Home/areYou'/* 
 import Courses from '../components/Home/courses'
@@ -14,8 +14,8 @@ import Connect from '../components/Home/Connect'
 export default function Home () {
   return (
     <General>
-      <Acad />
       <Hero />
+      {/* <Acad /> */}
       <StartLearn />
       <AreYou />
       {/* <Courses /> */}
